@@ -6,8 +6,6 @@ import { Routes as Router, Route } from 'react-router';
 import { Routes } from './routes';
 
 // Pages
-// import withSuspense from '~/hoc/withSuspense';
-
 const Home = lazy(() => import('../pages/home'));
 const ChatPage = lazy(() => import('../pages/chatPage'));
 
