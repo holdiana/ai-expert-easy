@@ -1,15 +1,24 @@
 import React from 'react';
-import { Typography } from '@mui/material';
 import * as S from './chatPage.styled';
+import ChatHeader from './chatHeader';
+import ChatBody from './chatBody';
+import { Button } from '@mui/material';
+import { Routes } from '../../app/routes';
+import { useNavigate } from 'react-router-dom';
 
-const Home:React.FC = () => {
-  
+const ChatPage:React.FC = () => {
+  const navigate = useNavigate();
+
+  const goToHomePage = (): void => {
+    navigate(Routes.home);
+  };
   return (
-    <S.Container >
-      <Typography variant="h4">Chat Page</Typography>
-      {/* Render your table here using the data */}
-    </S.Container>
+    <S.ChatPageContainer >
+      <ChatHeader/>
+      <ChatBody/>
+      <Button onClick={goToHomePage}> Go Home Page</Button>
+    </S.ChatPageContainer>
   );
 }
 
-export default Home;
+export default ChatPage;

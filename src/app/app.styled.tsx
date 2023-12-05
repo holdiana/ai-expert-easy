@@ -1,7 +1,6 @@
 import { styled } from '@mui/material/styles';
 
 export const Container = styled('div')`
-  background-color: red;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
